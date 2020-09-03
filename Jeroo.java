@@ -6,10 +6,63 @@ public class Jeroo extends JerooBase {
 
     
     public void plantCross() {
-        
-    }
+    setStart();
+  	goFirstEdge();
+  	threePlantHop();
+	  goAroundEdge();
+  	goAroundEdge();
+  	goAroundEdge();
+        }
     // Put any helpermethods here
-    
+  public void setStart() {
+  hop();
+  hop();
+  hop();
+  hop();
+  hop();
+  hop();
+  turn(RIGHT);
+  hop();
+  hop();
+  hop();
+  turn(LEFT);
+}
+
+public void threePlant() {
+  plant();
+  hop();
+  plant();
+  hop();
+  plant();
+}
+
+public void threePlantHop() {
+  plant();
+  hop();
+  plant();
+  hop();
+  plant();
+  hop();
+}
+
+public void goAroundEdge() {
+  turn(RIGHT);
+  threePlant();
+  turn(RIGHT);
+  threePlantHop();
+  turn(LEFT);
+  threePlantHop();
+  
+}
+
+public void goFirstEdge() {
+	threePlant();
+  	turn(RIGHT);
+  	threePlantHop();
+  	turn(LEFT);
+}
+
+
     
     
     
